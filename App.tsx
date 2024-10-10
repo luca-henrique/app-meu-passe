@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { SafeAreaView } from 'react-native';
+import RouterApp from './src/routers';
 
 function App(): React.JSX.Element {
   return (
-    <SafeAreaView />
+    <RouterApp />
   );
 }
 
