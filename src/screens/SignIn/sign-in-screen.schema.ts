@@ -1,6 +1,6 @@
 import z from 'zod';
-import {isValidCpf} from '../../validations/document';
-import {commonPasswords} from '../../validations/password';
+
+import {isValidCpf, commonPasswords} from '@validations/index';
 
 const CPF_MIN_LENGTH = 11;
 const PASSWORD_MIN_LENGTH = 4;

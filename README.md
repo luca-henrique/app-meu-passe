@@ -4,6 +4,6 @@ https://www.figma.com/file/6MNbjkWPqG2xO4uvHUkZSL/Recardbus?node-id=1%3A56&t=zSK
 
 ## Tarefas para Hoje
 
-- [ ] Criar repositorio para o projeto
-- [ ] Ajustar Absolut path
-- [ ] Ajustar fonts do projeto
+- [x] Criar repositorio para o projeto
+- [x] Ajustar Absolut path
+- [] Ajustar fonts do projeto
