@@ -1,7 +1,7 @@
 import React from 'react';
-import {Button} from './style';
+import { Button } from './style';
 
-import Icon from '../../Icon';
+import { Icon } from '../../Icon';
 
 const IconButton = ({
   icon,

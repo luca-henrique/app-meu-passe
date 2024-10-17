@@ -1,73 +1,77 @@
 import React, { useState } from 'react';
-import { Input, Container, TextError, Label, InputContainer } from './style';
+import { Input, Container, TextError, Label, InputContainer, ContainerError } from './style';
 
 import Icon from '../Button/Icon';
-import MaskInput from '../MaskInput/';
+import { MaskInput } from '../MaskInput/';
 
+
+import { TextInputProps } from 'react-native';
+import { ColorKeyProps } from '../../../common/colors';
+
+interface InputProps extends TextInputProps {
+  label: string;
+  text: string;
+  error: string | undefined;
+  color?: ColorKeyProps;
+  mask?: string;
+  onChangeText: ((text: string) => void)
+  type?: string
+}
 
 const Index = ({
   label,
   text,
   secureTextEntry,
   error,
-  color,
-  type,
   mask,
+  type = 'custom',
+  onChangeText,
   ...inputProps
-}: any) => {
+}: InputProps) => {
   const [visiblePasswordText, setVisiblePasswordText] = useState(true);
-
-  const borderInput = {
-    error: { borderColor: 'red-default', borderWidth: 2 },
-    success: { borderColor: 'green-default', borderWidth: 2 },
-    default: { borderColor: 'white-dark', borderWidth: 1 },
-  };
-
-  const { borderColor, borderWidth } =
-    borderInput[
-    visiblePasswordText ? 'default' : error ? 'error' : 'success'
-    ];
 
   return (
     <Container>
       <Label>{label}</Label>
       <InputContainer
-        borderColor={secureTextEntry && borderColor}
-        borderWidth={secureTextEntry && borderWidth}>
+        borderColor={'green-default'}
+        borderWidth={1}>
         {mask ? (
           <MaskInput
-            placeholderTextColor={color}
             placeholder={text}
+            mask={mask}
             type={type}
-            secureTextEntry={
-              !visiblePasswordText ? visiblePasswordText : secureTextEntry
-            }
+            onChangeText={(value: string) => onChangeText(value)}
             {...inputProps}
           />
         ) : (
           <Input
-            placeholderTextColor={color}
             placeholder={text}
+            onChangeText={(value: string) => onChangeText(value)}
             secureTextEntry={
               !visiblePasswordText ? visiblePasswordText : secureTextEntry
             }
             {...inputProps}
           />
         )}
-        {/* {secureTextEntry && (
+
+
+        {secureTextEntry && (
           <Icon
             icon={
               visiblePasswordText
-                ? 'eye-close'
+                ? 'eye-close-icon'
                 : error
-                  ? 'eye-open-error'
-                  : 'eye-open'
+                  ? 'eye-open-error-icon'
+                  : 'eye-open-icon'
             }
             onPress={() => setVisiblePasswordText(!visiblePasswordText)}
           />
-        )} */}
+        )}
       </InputContainer>
-      {!!error && <TextError>{error.message}</TextError>}
+      <ContainerError>
+        {!!error && <TextError>{error}</TextError>}
+      </ContainerError>
     </Container>
   );
 };

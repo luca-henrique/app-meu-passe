@@ -1,17 +1,17 @@
 import styled from 'styled-components/native';
-import {COLORS} from '../../../common/colors';
+import {getColor, ColorKeyProps} from '../../../common/colors';
 
-interface LabelProps {
+export interface LabelProps {
   fontSize?: string;
   lineHeight?: string;
   fontFamily?: string;
-  fontWight?: string;
-  color?: string;
+  fontWeight?: number;
+  color?: ColorKeyProps;
 }
 
 export const Label = styled.Text<LabelProps>`
   font-size: ${({fontSize}) => fontSize};
   line-height: ${({lineHeight}) => lineHeight};
-  font-weight: ${({fontWight}) => fontWight};
-  color: ${({color}) => (color ? `${COLORS[color]}` : COLORS['white-default'])};
+  font-weight: ${({fontWeight}) => fontWeight};
+  color: ${({color}) => (color ? `${getColor(color)}` : getColor('white-default'))};
 `;

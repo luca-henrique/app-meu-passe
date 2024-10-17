@@ -1,18 +1,17 @@
 import React from 'react';
 
-import {TextInputMask} from 'react-native-masked-text';
+import { MaskedTextInput, MaskedTextInputProps } from 'react-native-mask-text';
 
-const MaskInput = ({type, value, onChangeText}: any) => {
+interface MaskInput extends MaskedTextInputProps {
+}
+
+export const MaskInput = ({ type, onChangeText, ...props }: MaskInput) => {
   return (
-    <TextInputMask
-      style={{width: '100%', height: 52, color: '#5555'}}
+    <MaskedTextInput
+      style={{ width: '100%', height: 52 }}
+      onChangeText={onChangeText}
       type={type}
-      value={value}
-      onChangeText={text => {
-        onChangeText(type, text);
-      }}
-    />
+      {...props} />
   );
 };
 
-export default MaskInput;

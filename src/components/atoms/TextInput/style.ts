@@ -1,51 +1,63 @@
 import styled from 'styled-components/native';
-import {COLORS} from '../../../common/colors';
+import {ColorKeyProps, getColor} from '../../../common/colors';
+import {scale} from '../../../utils/dimesions';
 
 export const Container = styled.View`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 4px;
 `;
 
 export const Label = styled.Text`
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 13px;
   line-height: 17px;
   text-transform: uppercase;
-  color: ${COLORS['gray-500']};
+  color: ${getColor('gray-500')};
 `;
 
-export const InputContainer = styled.View`
-  margin-top: 4px;
-  margin-bottom: 6px;
+export interface InputContainerProps {
+  borderColor?: ColorKeyProps;
+  borderWidth?: number;
+}
+
+export const InputContainer = styled.View<InputContainerProps>`
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
   height: 52px;
-  background: ${COLORS['white-light']};
+  background: ${getColor('white-light')};
 
   border-color: ${({borderColor}) =>
-    borderColor ? `${COLORS[borderColor]}` : `${COLORS['white-dark']}`};
+    borderColor ? `${getColor(borderColor)}` : `${getColor('white-dark')}`};
   border-style: solid;
   border-width: ${({borderWidth}) =>
     borderWidth ? `${borderWidth}px` : '1px'};
 
-  border-radius: 6px;
+  border-radius: 14px;
   padding: 18px;
 `;
 
 export const Input = styled.TextInput`
   width: 94%;
-  height: 52px;
-  color: #2a2b2b;
+  height: ${scale(42).toFixed()}px;
+  background-color: ${getColor('white')};
+  color: ${getColor('gray-400')};
 `;
 
 export const TextError = styled.Text`
   font-weight: 500;
-  font-size: 12px;
-  line-height: 13px;
-  color: ${COLORS['red-default']};
+  font-size: ${scale(12).toFixed()}px;
+  line-height: ${scale(13).toFixed()}px;
+  color: ${getColor('red-default')};
+`;
+
+export const ContainerError = styled.View`
+  height: ${scale(12).toFixed()}px;
+  justify-content: 'flex-end';
+  margin-top: ${scale(4).toFixed()}px;
 `;

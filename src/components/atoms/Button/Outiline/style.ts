@@ -1,16 +1,16 @@
 import styled from 'styled-components/native';
-import {COLORS} from '../../../../common';
+import {getColor, ColorKeyProps} from '../../../../common/colors';
 
 interface PropsButton {
-  background?: string;
-  borderColor?: string;
+  background?: ColorKeyProps;
+  borderColor?: ColorKeyProps;
 }
 
 export const Button = styled.TouchableOpacity<PropsButton>`
   width: 100%;
   height: 52px;
   background-color: ${({background}) =>
-    background ? `${COLORS[background]}` : `${COLORS['white-default']}`};
+    background ? `${getColor(background)}` : `${getColor('white-default')}`};
 
   justify-content: center;
   align-items: center;
@@ -18,7 +18,7 @@ export const Button = styled.TouchableOpacity<PropsButton>`
   border-width: 1px;
 
   border-color: ${({borderColor}) =>
-    borderColor ? `${COLORS[borderColor]}` : `${COLORS['red-default']}`};
+    borderColor ? `${getColor(borderColor)}` : `${getColor('red-default')}`};
 `;
 
 export const ButtonText = styled.Text`
@@ -27,5 +27,5 @@ export const ButtonText = styled.Text`
   font-size: 15px;
   line-height: 18px;
   color: ${({color}) =>
-    color ? `${COLORS[color]}` : `${COLORS['red-default']}`};
+    color ? `${getColor(color)}` : `${getColor('red-default')}`};
 `;

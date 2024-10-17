@@ -1,15 +1,16 @@
 import React from 'react';
-import {Button, ButtonText} from './style';
+import { Button as ButtonStyle, ButtonText } from './style';
 
-const Index = ({children, onPress, background, disabled}: any) => {
+
+export const Button = ({ children, onPress, background, disabled }: any) => {
+
   return (
-    <Button
+    <ButtonStyle
       onPress={() => onPress()}
       background={background}
       disabled={disabled}>
       <ButtonText>{children}</ButtonText>
-    </Button>
+    </ButtonStyle>
   );
 };
 
-export default Index;

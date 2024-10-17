@@ -1,14 +1,16 @@
 import React from 'react';
-import { SvgXml } from 'react-native-svg';
-import { Icons } from '../../../assets/icons/';
+import { getIcon, IconKeyProps } from '../../../assets/icons/';
 
-const Icon = ({ icon, height, width }: any) => {
-  return <SvgXml width={width} height={height} xml={Icons[icon]} fill="#000" />;
+export interface IconProps {
+  icon: IconKeyProps;
+  height?: number;
+  width?: number;
+  fill?: string;
+  stroke?: string
+}
+
+export const Icon = ({ icon, height = 21, width = 21, ...props }: IconProps) => {
+  const SelectedIcon = (getIcon(icon));
+  return <SelectedIcon width={width} height={height} {...props} />;
 };
 
-Icon.defaultProps = {
-  height: 19,
-  width: 21,
-};
-
-export default Icon;
