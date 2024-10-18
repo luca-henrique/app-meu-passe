@@ -42,16 +42,16 @@ export const SignInScreenView = ({ handleChangeInputValue, errors, handleSubmit 
 
       <StyledContainer justify="flex-end">
         <TouchableOpacity onPress={() => console.log('aq')}>
-          <Typography color="gray-500" variant="body1">Esqueceu a senha?</Typography>
+          <Typography color="green-default" variant="body1">Esqueceu a senha?</Typography>
         </TouchableOpacity>
       </StyledContainer>
       <Separator height={scale(8)} />
       <Button onPress={() => handleSubmit()}>Entrar</Button>
       <Separator height={scale(8)} />
       <StyledContainer justify="center" gap={2}>
-        <Typography color="gray-500" variant="body1" >não tem uma conta?</Typography>
+        <Typography color="gray-100" variant="body1" >não tem uma conta?</Typography>
         <TouchableOpacity onPress={() => console.log('aq')}>
-          <Typography color="gray-500" variant="body1">conecte-se</Typography>
+          <Typography color="green-default" variant="body1">conecte-se</Typography>
         </TouchableOpacity>
       </StyledContainer>
 
