@@ -30,6 +30,8 @@ https://www.figma.com/file/6MNbjkWPqG2xO4uvHUkZSL/Recardbus?node-id=1%3A56&t=zSK
 - [x] apenas paginas SignUpScreen
 - [x] apenas paginas RecoveryAccountScreen
 - [x] apenas paginas DashboardScreen
+- [x] adicionar biblioteca para steps
+- [] criar rotas autenticadas
 - [] criar rotas autenticadas
 - [] adicionar loading
 - [] linkar SplashScreen
