@@ -13,7 +13,7 @@ import { Separator } from '../../components/atoms/Separator/Separator';
 import { Button } from '../../components/atoms/Button/Button';
 import { SignInScreenViewProps } from './sign-in-screen.type';
 
-export const SignInScreenView = ({ handleChangeInputValue, errors, handleSubmit }: SignInScreenViewProps) => {
+export const SignInScreenView = ({ handleChangeInputValue, errors, handleSubmit, navigation }: SignInScreenViewProps) => {
   return (
     <KeyboardAvoidingView padding={scale(18)} justify="center" >
       <Typography color="green-default">MeuPasse</Typography>
@@ -41,7 +41,7 @@ export const SignInScreenView = ({ handleChangeInputValue, errors, handleSubmit 
       </StyledContainer>
 
       <StyledContainer justify="flex-end">
-        <TouchableOpacity onPress={() => console.log('aq')}>
+        <TouchableOpacity onPress={() => navigation('RecoveryAccountScreen')}>
           <Typography color="green-default" variant="body1">Esqueceu a senha?</Typography>
         </TouchableOpacity>
       </StyledContainer>
@@ -50,8 +50,8 @@ export const SignInScreenView = ({ handleChangeInputValue, errors, handleSubmit 
       <Separator height={scale(8)} />
       <StyledContainer justify="center" gap={2}>
         <Typography color="gray-100" variant="body1" >não tem uma conta?</Typography>
-        <TouchableOpacity onPress={() => console.log('aq')}>
-          <Typography color="green-default" variant="body1">conecte-se</Typography>
+        <TouchableOpacity onPress={() => navigation('SignUpScreen')}>
+          <Typography color="green-default" variant="body1" >conecte-se</Typography>
         </TouchableOpacity>
       </StyledContainer>
 

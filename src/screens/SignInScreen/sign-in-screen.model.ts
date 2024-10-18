@@ -5,6 +5,7 @@ import {
 } from './sign-in-screen.schema';
 import {zodResolver} from '@hookform/resolvers/zod';
 import {FieldTypeSignInScreenSchema} from './sign-in-screen.type';
+import {useNavigationHook} from '../../hooks/useNavigation';
 
 export const useSignInModel = () => {
   const {setValue, handleSubmit, clearErrors, watch, formState} =
@@ -19,6 +20,8 @@ export const useSignInModel = () => {
 
   console.log(watch());
   const {errors} = formState;
+
+  const {navigation} = useNavigationHook();
 
   console.log(errors);
 
@@ -38,5 +41,6 @@ export const useSignInModel = () => {
     handleSubmit: handleSubmit(handleEvent),
     handleChangeInputValue,
     errors,
+    navigation,
   };
 };
