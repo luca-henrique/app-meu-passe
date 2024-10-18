@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import { getColor, ColorKeyProps } from '../../../../common/colors';
+import {getColor, ColorKeyProps} from '../../../../common/colors';
 
 interface PropsButton {
   background?: ColorKeyProps;

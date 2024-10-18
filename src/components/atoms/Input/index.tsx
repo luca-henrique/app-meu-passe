@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Input, Container, TextError, Label, InputContainer } from './style';
 
-import Icon from '../Button/Icon';
+import { IconButton } from '../Button/Icon/Icon';
 
 import MaskInput from '../MaskInput';
 
@@ -25,7 +25,7 @@ const Index = ({
 
   const { borderColor, borderWidth } =
     borderInput[
-    visiblePasswordText ? 'default' : !!error ? 'error' : 'success'
+    visiblePasswordText ? 'default' : error ? 'error' : 'success'
     ];
 
   return (
@@ -55,11 +55,11 @@ const Index = ({
           />
         )}
         {secureTextEntry && (
-          <Icon
+          <IconButton
             icon={
               visiblePasswordText
                 ? 'eye-close'
-                : !!error
+                : error
                   ? 'eye-open-error'
                   : 'eye-open'
             }

@@ -3,7 +3,7 @@ import { Button } from './style';
 
 import { Icon } from '../../Icon';
 
-const IconButton = ({
+export const IconButton = ({
   icon,
   onPress,
   background,
@@ -24,5 +24,3 @@ const IconButton = ({
     </Button>
   );
 };
-
-export default IconButton;

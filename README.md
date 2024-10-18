@@ -23,9 +23,9 @@ https://www.figma.com/file/6MNbjkWPqG2xO4uvHUkZSL/Recardbus?node-id=1%3A56&t=zSK
 - [x] adicionar valtio
 - [x] adicionar asyncStorage
 - [x] axios
-- [] contained button (apenas texto, com icon, disabled)
-- [] outlined button (apenas texto, com icon, disabled)
-- [] text button (apenas texto, com icon, disabled)
+- [x] contained button (apenas texto, com icon, disabled)
+- [x] outlined button (apenas texto, com icon, disabled)
+- [x] text button (apenas texto, com icon, disabled)
 - [] apenas paginas SplashScreen
 - [] apenas paginas SignUpScreen
 - [] criar rotas autenticadas

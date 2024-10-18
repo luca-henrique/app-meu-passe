@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Input, Container, TextError, Label, InputContainer, ContainerError } from './style';
 
-import Icon from '../Button/Icon';
+import { IconButton } from '../Button/Icon/Icon';
 import { MaskInput } from '../MaskInput/';
 
 
@@ -57,7 +57,7 @@ const Index = ({
 
 
         {secureTextEntry && (
-          <Icon
+          <IconButton
             icon={
               visiblePasswordText
                 ? 'eye-close-icon'
