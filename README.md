@@ -26,17 +26,15 @@ https://www.figma.com/file/6MNbjkWPqG2xO4uvHUkZSL/Recardbus?node-id=1%3A56&t=zSK
 - [x] contained button (apenas texto, com icon, disabled)
 - [x] outlined button (apenas texto, com icon, disabled)
 - [x] text button (apenas texto, com icon, disabled)
-- [] apenas paginas SplashScreen
-- [] apenas paginas SignUpScreen
+- [x] apenas paginas StepsScreen
+- [x] apenas paginas SignUpScreen
+- [x] apenas paginas RecoveryAccountScreen
+- [x] apenas paginas DashboardScreen
 - [] criar rotas autenticadas
 - [] adicionar loading
+- [] linkar SplashScreen
 
 ## Tarefas [19/08/2024]
-
-- [] SplashScreen
-- [] SignUpScreen
-- [] RecoveryAccountScreen
-- [] StepsScreen
 
 ## Tarefas [20/08/2024]
 
