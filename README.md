@@ -19,9 +19,9 @@ https://www.figma.com/file/6MNbjkWPqG2xO4uvHUkZSL/Recardbus?node-id=1%3A56&t=zSK
 - [x] Diferenciar button 'conecte-se'
 - [x] Adicionar Jest
 - [x] Gerar coverage
-- [] adicionar react query
-- [] adicionar valtio
-- [] adicionar asyncStorage
+- [x] adicionar react query
+- [x] adicionar valtio
+- [x] adicionar asyncStorage
 
 ## Tarefas [19/08/2024]
 
