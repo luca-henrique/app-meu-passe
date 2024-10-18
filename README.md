@@ -17,8 +17,8 @@ https://www.figma.com/file/6MNbjkWPqG2xO4uvHUkZSL/Recardbus?node-id=1%3A56&t=zSK
 
 - [x] Ajustar fonts do projeto
 - [x] Diferenciar button 'conecte-se'
-- [] Adicionar Jest
-- [] Gerar coverage
+- [x] Adicionar Jest
+- [x] Gerar coverage
 - [] adicionar react query
 - [] adicionar valtio
 - [] adicionar asyncStorage
