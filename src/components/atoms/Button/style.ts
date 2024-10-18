@@ -9,20 +9,20 @@ interface PropsButton {
 
 export const Button = styled.TouchableOpacity<PropsButton>`
   width: 100%;
+  flex-direction: row;
   height: ${scale(52)}px;
   background-color: ${({background}) =>
     background ? `${getColor(background)}` : `${getColor('green-default')}`};
-  color: ${({color}) =>
-    color ? `${getColor(color)}` : `${getColor('white')}`};
   justify-content: center;
   align-items: center;
   border-radius: ${scale(8)}px;
+  gap: ${scale(16)}px;
 `;
 
-export const ButtonText = styled.Text`
-  font-style: normal;
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  color: white;
+export const ButtonText = styled.Text<PropsButton>`
+  font-family: 'DMSans-Bold';
+  font-size: ${scale(16)}px;
+  line-height: ${scale(18)}px;
+  color: ${({color}) =>
+    color ? `${getColor(color)}` : `${getColor('white')}`};
 `;

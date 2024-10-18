@@ -22,8 +22,21 @@ https://www.figma.com/file/6MNbjkWPqG2xO4uvHUkZSL/Recardbus?node-id=1%3A56&t=zSK
 - [x] adicionar react query
 - [x] adicionar valtio
 - [x] adicionar asyncStorage
+- [x] axios
+- [] contained button (apenas texto, com icon, disabled)
+- [] outlined button (apenas texto, com icon, disabled)
+- [] text button (apenas texto, com icon, disabled)
+- [] apenas paginas SplashScreen
+- [] apenas paginas SignUpScreen
+- [] criar rotas autenticadas
+- [] adicionar loading
 
 ## Tarefas [19/08/2024]
+
+- [] SplashScreen
+- [] SignUpScreen
+- [] RecoveryAccountScreen
+- [] StepsScreen
 
 ## Tarefas [20/08/2024]
 
