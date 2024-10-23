@@ -10,7 +10,7 @@ export const Typography = {
   h2: {
     fontSize: `${scale(24)}px`,
     fontWeight: 700,
-    lineHeight: `${scale(22)}px`,
+    lineHeight: `${scale(32)}px`,
     fontFamily: 'DMSans-Bold',
   },
   h3: {

@@ -31,12 +31,15 @@ https://www.figma.com/file/6MNbjkWPqG2xO4uvHUkZSL/Recardbus?node-id=1%3A56&t=zSK
 - [x] apenas paginas RecoveryAccountScreen
 - [x] apenas paginas DashboardScreen
 - [x] adicionar biblioteca para steps
+
+## Tarefas [22/08/2024]
+
+- [] fazer importação da dashboard
+
 - [] criar rotas autenticadas
 - [] criar rotas autenticadas
 - [] adicionar loading
 - [] linkar SplashScreen
-
-## Tarefas [19/08/2024]
 
 ## Tarefas [20/08/2024]
 

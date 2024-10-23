@@ -6,8 +6,10 @@ import { SignInScreen } from '../screens/SignInScreen/sign-in-screen';
 import { SignUpScreen } from '../screens/SignUpScreen/sign-up-screen';
 import { StepsScreen } from '../screens/StepsScreen/steps-screen';
 import { RecoveryAccountScreen } from '../screens/RecoveryAccountScreen/recovery-account-screen';
-import { DashboardScreen } from '../screens/DashboardScreen/dashboard-screen';
+
 import { SplashScreen } from '../screens/SplashScreen/splash-screen';
+
+import { DashboardNavigation } from './bottom-navigation';
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +17,7 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator
-        initialRouteName="SplashScreen"
+        initialRouteName="DashboardScreen"
         screenOptions={{
           headerShown: false,
         }}>
@@ -24,7 +26,7 @@ const App = () => {
         <Stack.Screen name="SignUpScreen" component={SignUpScreen} />
         <Stack.Screen name="StepsScreen" component={StepsScreen} />
         <Stack.Screen name="RecoveryAccountScreen" component={RecoveryAccountScreen} />
-        <Stack.Screen name="DashboardScreen" component={DashboardScreen} />
+        <Stack.Screen name="DashboardScreen" component={DashboardNavigation} />
       </Stack.Navigator>
     </NavigationContainer>
   );
