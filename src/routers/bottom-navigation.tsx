@@ -10,6 +10,8 @@ import { scale, getBottomSpaceHeight } from '../utils/dimesions';
 import { HistoryPaymentScreen } from '../screens/HistoryPaymentScreen/history-payment-screen';
 import { TariffScreen } from '../screens/TariffScreen/tariff-screen';
 import { SignOut } from '../screens/SignOutScreen/sign-out-screen';
+import { PaymentScreen } from '../screens/PaymentScreen/payment-screen';
+import { PaymentMethodInvoice } from '@components/molecules/PaymentMethodInvoice/payment-method-invoice';
 
 
 const Tab = createBottomTabNavigator();
@@ -58,6 +60,15 @@ export const DashboardNavigation = () => {
           tabBarIcon: () => <TabBarIcon icon="home-icon" label="Tarifca" />,
         }}
       />
+
+      <Tab.Screen
+        name="Recarga"
+        component={PaymentScreen}
+        options={{
+          tabBarIcon: () => <TabBarIcon icon="history-icon" label="recarga" />,
+        }}
+      />
+
 
       <Tab.Screen
         name="Sair"

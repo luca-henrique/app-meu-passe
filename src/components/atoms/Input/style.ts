@@ -1,5 +1,5 @@
 import styled from 'styled-components/native';
-import {COLORS} from '../../../common';
+import {getColor} from '../../../common/colors';
 
 export const Container = styled.View`
   width: 100%;
@@ -14,7 +14,7 @@ export const Label = styled.Text`
   font-size: 13px;
   line-height: 17px;
   text-transform: uppercase;
-  color: ${COLORS['gray-500']};
+  color: ${getColor('gray-500')};
 `;
 
 export const InputContainer = styled.View`
@@ -25,13 +25,12 @@ export const InputContainer = styled.View`
   align-items: center;
   width: 100%;
   height: 52px;
-  background: ${COLORS['white-light']};
+  background: ${getColor('white-light')};
 
   border-color: ${({borderColor}) =>
-    borderColor ? `${COLORS[borderColor]}` : `${COLORS['white-dark']}`};
+    borderColor ? `${getColor(borderColor)}` : `${getColor('white-dark')}`};
   border-style: solid;
-  border-width: ${({borderWidth}) =>
-    borderWidth ? `${borderWidth}px` : `1px`};
+  border-width: ${({borderWidth}) => (borderWidth ? `${borderWidth}px` : 1)}px;
 
   border-radius: 6px;
   padding: 18px;
@@ -47,5 +46,5 @@ export const TextError = styled.Text`
   font-weight: 500;
   font-size: 12px;
   line-height: 13px;
-  color: ${COLORS['red-default']};
+  color: ${getColor('red-default')};
 `;

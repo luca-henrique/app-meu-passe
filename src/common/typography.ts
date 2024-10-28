@@ -16,7 +16,7 @@ export const Typography = {
   h3: {
     fontSize: `${scale(18)}px`,
     fontWeight: 500,
-    lineHeight: `${scale(16)}px`,
+    lineHeight: `${scale(22)}px`,
     fontFamily: 'DMSans-Regular',
   },
   body1: {
