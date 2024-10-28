@@ -6,6 +6,8 @@ import {
 import {zodResolver} from '@hookform/resolvers/zod';
 import {FieldTypeSignInScreenSchema} from './sign-in-screen.type';
 import {useNavigationHook} from '../../hooks/useNavigation';
+import {useMutation} from 'react-query';
+import axios from 'axios';
 
 export const useSignInModel = () => {
   const {setValue, handleSubmit, clearErrors, watch, formState} =
@@ -25,9 +27,23 @@ export const useSignInModel = () => {
 
   console.log(errors);
 
-  function handleEvent(value: SignInScreenSchemaType) {
-    console.log(value);
-  }
+  const createEmployee = async (data: any) => {
+    console.log(data);
+    const {data: response} = await axios.post(
+      'http://localhost:3000/sign-in',
+      data,
+    );
+    return response.data;
+  };
+
+  const {mutate, isLoading} = useMutation(createEmployee, {
+    onSuccess: data => {
+      console.log(data);
+    },
+    onError: () => {
+      console.error('');
+    },
+  });
 
   const handleChangeInputValue = (
     fieldName: FieldTypeSignInScreenSchema,
@@ -36,6 +52,11 @@ export const useSignInModel = () => {
     setValue(fieldName, value);
     clearErrors(fieldName);
   };
+
+  function handleEvent(value: SignInScreenSchemaType) {
+    console.log
+    mutate(value);
+  }
 
   return {
     handleSubmit: handleSubmit(handleEvent),

@@ -8,6 +8,8 @@ import { DashboardScreen } from '../screens/DashboardScreen/dashboard-screen';
 import { TabBarIcon } from '../components/atoms/TabBarIcon/TabBarIcon';
 import { scale, getBottomSpaceHeight } from '../utils/dimesions';
 import { HistoryPaymentScreen } from '../screens/HistoryPaymentScreen/history-payment-screen';
+import { TariffScreen } from '../screens/TariffScreen/tariff-screen';
+import { SignOut } from '../screens/SignOutScreen/sign-out-screen';
 
 
 const Tab = createBottomTabNavigator();
@@ -48,6 +50,26 @@ export const DashboardNavigation = () => {
         options={{
           tabBarIcon: () => <TabBarIcon icon="home-icon" label="Historico" />,
         }}
+      />
+      <Tab.Screen
+        name="Tarifa"
+        component={TariffScreen}
+        options={{
+          tabBarIcon: () => <TabBarIcon icon="home-icon" label="Tarifca" />,
+        }}
+      />
+
+      <Tab.Screen
+        name="Sair"
+        component={SignOut}
+        options={{
+          tabBarIcon: () => <TabBarIcon icon="leave-icon" label="sair" />,
+        }}
+        listeners={({ navigation }) => ({
+          tabPress: e => {
+            e.preventDefault();
+          },
+        })}
       />
     </Tab.Navigator>
   );

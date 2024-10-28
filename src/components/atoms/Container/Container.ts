@@ -18,7 +18,7 @@ interface ContainerProps {
 }
 
 export const StyledContainer = styled.View<ContainerProps>`
-  flex-direction: ${({direction}) => (direction ? 'column' : 'row')};
+  flex-direction: ${({direction}) => (direction ? 'row' : 'column')};
   background-color: ${({color}) =>
     color ? `${getColor(color)}` : 'transparent'};
   justify-content: ${({justify}) => (justify ? justify : 'flex-start')};

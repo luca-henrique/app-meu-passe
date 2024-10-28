@@ -1,8 +1,10 @@
+import React from 'react';
+
 import { StyledContainer, Typography } from '../../../components/atoms';
 import { getColor } from '../../../common/colors';
 import { useState } from 'react';
 
-import { Picker } from '@react-native-picker/picker';
+import { Picker, Picker } from '@react-native-picker/picker';
 
 const statusPayment = [
   { label: 'Mais recentes', value: 'mais recentes' },
@@ -15,9 +17,6 @@ const statusPayment = [
 export const HeaderPurchasesHistory = () => {
   const [selectedValue, setSelectedValue] = useState('mais recentes');
 
-  const ListStatusOrders = statusPayment.map(status => {
-    return <Picker.Item label={status.label} value={status.value} />;
-  });
   return (
     <StyledContainer direction align="flex-end" justify="space-between">
       <Typography color="gray-100" variant="body2">
@@ -34,7 +33,11 @@ export const HeaderPurchasesHistory = () => {
           borderColor: getColor('white-dark'),
         }}
         onValueChange={(itemValue, itemIndex) => setSelectedValue(itemValue)}>
-        {ListStatusOrders}
+        {statusPayment.map(status => {
+          return <Picker.Item label={status.label} value={status.value} key={status.label} />;
+        })}
+
+
       </Picker>
     </StyledContainer>
   );

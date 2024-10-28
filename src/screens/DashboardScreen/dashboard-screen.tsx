@@ -6,10 +6,10 @@ import React from 'react';
 export const DashboardScreen = () => {
 
   return (
-    <StyledContainer direction padding={18}>
+    <StyledContainer padding={18}>
       <Separator height={20} />
       <Typography color="green-dark">Olá Lucas</Typography>
-      <StyledContainer justify="space-between">
+      <StyledContainer direction justify="space-between">
         <CardInformationsDashboard
           text="Saldo atual"
           type="money"
