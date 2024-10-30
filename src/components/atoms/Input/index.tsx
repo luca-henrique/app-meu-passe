@@ -1,9 +1,21 @@
 import React, { useState } from 'react';
 import { Input, Container, TextError, Label, InputContainer } from './style';
-
+import { TextInputProps } from 'react-native';
 import { IconButton } from '../Button/Icon/Icon';
 
 import MaskInput from '../MaskInput';
+import { ColorProps } from '@src/common/colors';
+
+
+interface InputProps extends TextInputProps {
+  label?: string;
+  text?: string;
+  error?: string;
+  color?: ColorProps;
+  type?: any;
+  mask?: boolean
+}
+
 
 const Index = ({
   label,
@@ -14,7 +26,7 @@ const Index = ({
   type,
   mask,
   ...inputProps
-}: any) => {
+}: InputProps) => {
   const [visiblePasswordText, setVisiblePasswordText] = useState(true);
 
   const borderInput = {
@@ -67,7 +79,7 @@ const Index = ({
           />
         )}
       </InputContainer>
-      {!!error && <TextError>{error.message}</TextError>}
+      {!!error && <TextError>{error}</TextError>}
     </Container>
   );
 };

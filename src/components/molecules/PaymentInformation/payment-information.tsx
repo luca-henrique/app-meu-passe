@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledContainer, Typography } from '@components/atoms';
+import { currencyFormat } from '../../../utils/currency-format';
 
 
 export const ContainerPaymentInformation = ({ text, value }) => {
@@ -12,7 +13,7 @@ export const ContainerPaymentInformation = ({ text, value }) => {
         {text}
       </Typography>
       <Typography variant="body2" color="gray-800">
-        {value}
+        {currencyFormat(value)}
       </Typography>
     </StyledContainer>
   );

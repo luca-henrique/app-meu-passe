@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { getColor } from '../../../common/colors';
 import { StyleSheet, View } from 'react-native';
 import Modal from 'react-native-modal';
@@ -8,16 +8,18 @@ import { Typography } from '../../atoms/Typography/Typography';
 import QRCode from 'react-native-qrcode-svg';
 import { StyledContainer } from '../../atoms/Container/Container';
 import { Button } from '@components/atoms/Button/Button';
+import { usePaymentMethod } from '../../../hooks/usePaymentMethod';
 
 
 export const PaymentMethodPix = () => {
+  const { pix, handleClosePaymentMethodModal } = usePaymentMethod();
+
   const pixCode = '000.000.000-00';
 
-  const [visible, setVisible] = useState(true);
 
   return (
     <Modal
-      isVisible={visible}
+      isVisible={pix}
       swipeDirection="down"
       backdropOpacity={0.3}
       style={style.modal}>
@@ -48,7 +50,7 @@ export const PaymentMethodPix = () => {
             {pixCode}
           </Typography>
         </StyledContainer>
-        <Button onPress={() => setVisible(false)}>Copiar chave</Button>
+        <Button onPress={() => handleClosePaymentMethodModal('pix')}>Copiar chave</Button>
       </View>
     </Modal>
   );

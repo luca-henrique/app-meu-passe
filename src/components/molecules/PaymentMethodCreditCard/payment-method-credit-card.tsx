@@ -7,12 +7,9 @@ import { Typography } from '../../atoms/Typography/Typography';
 import TextInput from '../../atoms/Input';
 import { StyledContainer } from '../../atoms/Container/Container';
 import { Button } from '@components/atoms/Button/Button';
-import { Dimensions } from 'react-native';
 
 
-const { width } = Dimensions.get('screen');
 
-console.log((width / 2).toFixed());
 
 export const PaymentMethodCreditCard = () => {
   const [visible, setVisible] = useState(true);

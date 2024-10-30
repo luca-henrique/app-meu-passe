@@ -11,11 +11,6 @@ export const DashboardScreen = () => {
       <Separator height={getStatusBarHeight()} />
       <Typography color="green-dark">Olá Lucas</Typography>
       <StyledContainer direction justify="space-between">
-        <CardInformationsDashboard
-          text="Saldo atual"
-          type="money"
-          value={100}
-        />
         <CardInformationsDashboard text="Quantidade de passes" value={10} />
       </StyledContainer>
     </StyledContainer>);

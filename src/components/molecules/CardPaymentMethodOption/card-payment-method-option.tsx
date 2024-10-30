@@ -8,7 +8,7 @@ import { Separator } from '@components/atoms/Separator/Separator';
 export const CardPaymentMethodOption = ({ icon, text, selected, onPress }) => {
 
   return (
-    <ContainerCardPaymentMethods onPress={() => onPress(text)}>
+    <ContainerCardPaymentMethods onPress={onPress}>
       <StyledContainer
         width={100}
         color={selected ? 'green-default' : 'white-light'}

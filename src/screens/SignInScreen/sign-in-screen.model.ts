@@ -20,15 +20,11 @@ export const useSignInModel = () => {
       },
     });
 
-  console.log(watch());
   const {errors} = formState;
 
   const {navigation} = useNavigationHook();
 
-  console.log(errors);
-
   const createEmployee = async (data: any) => {
-    console.log(data);
     const {data: response} = await axios.post(
       'http://localhost:3000/sign-in',
       data,
@@ -54,7 +50,6 @@ export const useSignInModel = () => {
   };
 
   function handleEvent(value: SignInScreenSchemaType) {
-    console.log
     mutate(value);
   }
 

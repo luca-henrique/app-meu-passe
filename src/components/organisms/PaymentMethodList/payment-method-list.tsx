@@ -1,27 +1,40 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { StyledContainer } from '../../atoms/Container/Container';
 import { CardPaymentMethodOption } from '../../molecules/CardPaymentMethodOption/card-payment-method-option';
+import { usePaymentMethod } from '../../../hooks/usePaymentMethod';
+import { FieldNamePaymentMethodProps } from '@src/context/payment-method';
 
-const methodsPayments = [
+
+interface PaymentMethod {
+  icon: string;
+  text: string
+  type: FieldNamePaymentMethodProps
+}
+
+const methodsPayments: PaymentMethod[] = [
   {
     icon: 'pix-icon',
+    type: 'pix',
     text: 'PIX',
   },
   {
     icon: 'ticket-icon',
+    type: 'invoice',
     text: 'Boleto',
   },
   {
     icon: 'card-icon',
+    type: 'credit_card',
     text: 'Cartão',
   },
 ];
 
-const ListContainerCardPaymentMethods = () => {
-  const [selectedCard, setSelectedCard] = useState('PIX');
 
-  const changeSelectOptionPayment = (option: string) => {
-    setSelectedCard(option);
+export const PaymentMethodList = () => {
+  const { handleChoosePaymentMethod, visible } = usePaymentMethod();
+
+  const changeSelectOptionPayment = (option: FieldNamePaymentMethodProps) => {
+    handleChoosePaymentMethod(option);
   };
 
   return (
@@ -29,11 +42,10 @@ const ListContainerCardPaymentMethods = () => {
       {methodsPayments.map(method => {
         return (
           <CardPaymentMethodOption
-            icon={method.icon}
-            text={method.text}
-            key={method.icon}
-            selected={selectedCard === method.text}
-            onPress={changeSelectOptionPayment}
+            {...method}
+            key={`${method.type}`}
+            selected={visible === method.type}
+            onPress={() => changeSelectOptionPayment(method.type)}
           />
         );
       })}
@@ -41,4 +53,3 @@ const ListContainerCardPaymentMethods = () => {
   );
 };
 
-export default ListContainerCardPaymentMethods;

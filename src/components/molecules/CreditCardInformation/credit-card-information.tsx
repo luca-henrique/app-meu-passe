@@ -4,8 +4,17 @@ import { StyledContainer, Typography } from '@components/atoms';
 import { Icon } from '@components/atoms/Icon';
 import { View } from 'react-native';
 import { getColor } from '../../../common/colors';
+import { usePaymentMethod } from '../../../hooks/usePaymentMethod';
 
 export const CreditCardInformation = () => {
+  const { credit_card } = usePaymentMethod();
+
+  console.log(credit_card);
+
+  if (!credit_card) {
+    return null;
+  }
+
   return (
     <StyledContainer
       direction

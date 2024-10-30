@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Modal from 'react-native-modal';
 import Barcode from '@kichiyaki/react-native-barcode-generator';
 import { Dimensions, StyleSheet } from 'react-native';
@@ -6,14 +6,15 @@ import { Typography } from '@components/atoms';
 import { getColor } from '../../../common/colors';
 import { Button } from '@components/atoms/Button/Button';
 import { Container } from './style';
+import { usePaymentMethod } from '../../../hooks/usePaymentMethod';
 
 
 export const PaymentMethodInvoice = () => {
-  const [visible, setVisible] = useState(true);
+  const { invoice, handleClosePaymentMethodModal } = usePaymentMethod();
 
   return (
     <Modal
-      isVisible={visible}
+      isVisible={invoice}
       swipeDirection="down"
       backdropOpacity={0.4}
       style={style.modal}>
@@ -28,7 +29,7 @@ export const PaymentMethodInvoice = () => {
           style={{ backgroundColor: getColor('white-default') }}
           maxWidth={Dimensions.get('window').width}
         />
-        <Button onPress={() => setVisible(false)}>
+        <Button onPress={() => handleClosePaymentMethodModal('invoice')}>
           Copia código
         </Button>
       </Container>
