@@ -1,6 +1,7 @@
 npx react-native run-ios --simulator="iPhone 15"
 https://github.com/Genymobile/scrcpy/blob/master/doc/macos.md
 https://www.figma.com/file/6MNbjkWPqG2xO4uvHUkZSL/Recardbus?node-id=1%3A56&t=zSKXoQaNL387MJ8N-0
+https://medium.com/reactbrasil/leitura-de-tags-nfc-com-react-native-4bb015e8d718
 
 ## Padroes
 
@@ -8,12 +9,12 @@ https://www.figma.com/file/6MNbjkWPqG2xO4uvHUkZSL/Recardbus?node-id=1%3A56&t=zSK
 - Atomic Design
 - Clean code
 
-## Tarefas [17/08/2024]
+## Tarefas [17/10/2024]
 
 - [x] Criar repositorio para o projeto
 - [x] Ajustar Absolut path
 
-## Tarefas [18/08/2024]
+## Tarefas [18/10/2024]
 
 - [x] Ajustar fonts do projeto
 - [x] Diferenciar button 'conecte-se'
@@ -32,16 +33,12 @@ https://www.figma.com/file/6MNbjkWPqG2xO4uvHUkZSL/Recardbus?node-id=1%3A56&t=zSK
 - [x] apenas paginas DashboardScreen
 - [x] adicionar biblioteca para steps
 
-## Tarefas [22/08/2024]
+## Tarefas [31/10/2024]
 
-- [] fazer importação da dashboard
+- [] ajustar home por mais informações
+- [] adicionar nfc
 
-- [] criar rotas autenticadas
-- [] criar rotas autenticadas
-- [] adicionar loading
-- [] linkar SplashScreen
-
-## Tarefas [20/08/2024]
+## Tarefas [20/10/2024]
 
 ## Aulas
 
