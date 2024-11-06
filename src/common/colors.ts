@@ -6,7 +6,7 @@ const COLORS = {
 
   white: '#fff',
   'white-light': '#FAFCFB',
-  'white-default': '#F2F7F4',
+  'white-default': '#FFF',
   'white-dark': '#E9F0EB',
 
   'gray-100': '#5E6361',
@@ -24,14 +24,13 @@ const COLORS = {
   'yellow-light': '#D9CC9E',
   'yellow-default': '#D2AE2E',
   'yellow-dark': '#534923',
-}as const;
+} as const;
 
+export type ColorProps = typeof COLORS;
 
-export type ColorProps = typeof COLORS
+export type ColorKeyProps = keyof ColorProps;
 
-export type ColorKeyProps = keyof ColorProps
-
-type IconValueReturn = ColorProps[ColorKeyProps]
+type IconValueReturn = ColorProps[ColorKeyProps];
 
 export const getColor = (name: ColorKeyProps): IconValueReturn => {
   return COLORS[name];

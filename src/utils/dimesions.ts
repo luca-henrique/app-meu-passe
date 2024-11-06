@@ -43,7 +43,13 @@ export const scale = (size: number) => {
   if (Platform.OS === 'ios') {
     return !isWeb() ? (screenWidth / guidelineBaseWidth) * size : size;
   } else {
-    return !isWeb() ? (screenWidth / guidelineBaseWidth) * size - 2 : size - 2;
+    const calculeScaleIsWeb = parseInt((size - 2).toFixed());
+
+    const calculeScale = parseInt(
+      ((screenWidth / guidelineBaseWidth) * size - 2).toFixed(),
+    );
+
+    return !isWeb() ? calculeScale : calculeScaleIsWeb;
   }
 };
 

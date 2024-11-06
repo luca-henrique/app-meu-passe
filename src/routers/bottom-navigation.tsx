@@ -12,6 +12,7 @@ import { TariffScreen } from '../screens/TariffScreen/tariff-screen';
 import { SignOut } from '../screens/SignOutScreen/sign-out-screen';
 import { PaymentScreen } from '../screens/PaymentScreen/payment-screen';
 import { PaymentMethodInvoice } from '@components/molecules/PaymentMethodInvoice/payment-method-invoice';
+import { DashboardCollectorScreen } from '../screens/DashboardCollectorScreen/dashboard-collector-screen';
 
 
 const Tab = createBottomTabNavigator();
@@ -61,9 +62,17 @@ export const DashboardNavigation = () => {
         }}
       />
 
-      <Tab.Screen
+      {/* <Tab.Screen
         name="Recarga"
         component={PaymentScreen}
+        options={{
+          tabBarIcon: () => <TabBarIcon icon="history-icon" label="recarga" />,
+        }}
+      /> */}
+
+      <Tab.Screen
+        name="Recarga"
+        component={DashboardCollectorScreen}
         options={{
           tabBarIcon: () => <TabBarIcon icon="history-icon" label="recarga" />,
         }}
