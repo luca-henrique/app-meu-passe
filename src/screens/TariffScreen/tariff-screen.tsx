@@ -1,13 +1,9 @@
 import React from 'react';
 import {
-  StyledContainer,
-} from '../../components/atoms/Container/Container';
-import { Icon } from '@components/atoms/Icon';
-import { Typography } from '@components/atoms';
-import { Separator } from '@components/atoms/Separator/Separator';
-import { getStatusBarHeight } from '../../utils/dimesions';
-import { TARIFF } from '../../mock/tariff';
-import { Table } from '@components/atoms/Table/table';
+  StyledContainer, Icon, Typography, Separator, Table,
+} from '../../widgets/atoms';
+import { getStatusBarHeight } from '../../shared/utils/dimesions';
+import { TARIFF } from '../../shared/mock/tariff';
 
 
 const columns = ['Quantidade', 'Valor'];

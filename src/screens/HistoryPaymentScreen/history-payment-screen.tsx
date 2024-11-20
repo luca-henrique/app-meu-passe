@@ -1,8 +1,8 @@
 import React from 'react';
-import { PaymentHistoryList } from '@components/organisms/PaymentHistoryList/payment-history-list';
-import { StyledContainer, Typography } from '@components/atoms';
-import { Separator } from '@components/atoms/Separator/Separator';
-import { HeaderPurchasesHistory } from '@components/molecules/HeaderPurchasesHistory/HeaderPurchasesHistory';
+import { PaymentHistoryList } from '../../widgets/organisms/PaymentHistoryList/payment-history-list';
+import { StyledContainer, Typography } from '../../widgets/atoms';
+import { Separator } from '../../widgets/atoms/Separator/Separator';
+import { HeaderPurchasesHistory } from '../../widgets/molecules/HeaderPurchasesHistory/HeaderPurchasesHistory';
 
 export const HistoryPaymentScreen = () => {
   return (

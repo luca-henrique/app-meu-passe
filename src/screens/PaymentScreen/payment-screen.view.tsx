@@ -1,25 +1,21 @@
 import React from 'react';
 
 
-import { StyledContainer } from '../../components/atoms/Container/Container';
+import { StyledContainer, TextInput, Typography, Button, Separator } from '../../widgets/atoms';
 
-import TextInput from '../../components/atoms/Input';
-import { Typography } from '@components/atoms';
-import { Button } from '@components/atoms/Button/Button';
 
-import { Separator } from '@components/atoms/Separator/Separator';
-import { getStatusBarHeight } from '../../utils/dimesions';
-import { CreditCardInformation } from '@components/molecules/CreditCardInformation/credit-card-information';
-import { PaymentMethodInvoice } from '@components/molecules/PaymentMethodInvoice/payment-method-invoice';
-import { PaymentMethodPix } from '@components/molecules/PaymentMethodPix/payment-method-pix';
+import { getStatusBarHeight } from '../../shared/utils/dimesions';
+import { CreditCardInformation } from '../../widgets/molecules/CreditCardInformation/credit-card-information';
+import { PaymentMethodInvoice } from '../../widgets/molecules/PaymentMethodInvoice/payment-method-invoice';
+import { PaymentMethodPix } from '../../widgets/molecules/PaymentMethodPix/payment-method-pix';
 import {
   FieldNamePaymentMethodProps,
 
-} from '../../context/payment-method';
+} from '../../app/provider/payment-method';
 import { usePaymentScreenModel } from './payment-screen.model';
-import { usePaymentMethod } from '../../hooks/usePaymentMethod';
-import { PaymentMethodInformation } from '@components/molecules/PaymentMethodInformation/payment-method-information';
-import { ChoosenPaymentMethod } from '@components/molecules/ChoosenPaymentMethod/choosen-payment-method';
+import { usePaymentMethod } from '../../app/provider/usePaymentMethod';
+import { PaymentMethodInformation } from '../../widgets/molecules/PaymentMethodInformation/payment-method-information';
+import { ChoosenPaymentMethod } from '../../widgets/molecules/ChoosenPaymentMethod/choosen-payment-method';
 
 export type PaymentScreenModelProps = ReturnType<typeof usePaymentScreenModel>;
 

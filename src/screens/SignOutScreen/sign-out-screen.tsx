@@ -1,10 +1,9 @@
 import React from 'react';
-import { StyledContainer, Typography } from '@components/atoms';
+import { StyledContainer, Typography, Button } from '../../widgets/atoms';
 import Modal from 'react-native-modal';
 
-import { getColor } from '../../common/colors';
+import { getColor } from '../../shared/common/colors';
 import { View } from 'react-native';
-import { Button } from '@components/atoms/Button/Button';
 
 export function SignOut() {
 

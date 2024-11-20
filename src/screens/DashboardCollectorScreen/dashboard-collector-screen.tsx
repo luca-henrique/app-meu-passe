@@ -1,7 +1,9 @@
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import NfcManager, { NfcTech } from 'react-native-nfc-manager';
-import React from 'react';
-import { Camera, useCameraDevice, useCameraPermission } from 'react-native-vision-camera';
+import {
+  Camera, useCameraDevice, useCameraPermission, CameraRuntimeError,
+  useCodeScanner,
+} from 'react-native-vision-camera';
 import { Alert, BackHandler, Platform, Text, TouchableOpacity, View } from 'react-native';
 
 const isIos = Platform.OS === 'ios';
@@ -10,15 +12,11 @@ export enum EPermissionTypes {
   CAMERA = 'camera',
 }
 
-import {
-  CameraRuntimeError,
-  useCodeScanner,
-} from 'react-native-vision-camera';
+
 import { useIsFocused } from '@react-navigation/core';
 import { useAppStateListener } from './ask';
 import { RESULTS } from 'react-native-permissions';
 import { goToSettings, usePermissions } from './usePermissions';
-import { useMutation } from 'react-query';
 
 const postDebitBalance = async (data) => {
   const response = await fetch('https://api-meu-passe.onrender.com/balance/debit', {
@@ -54,10 +52,10 @@ export const DashboardCollectorScreen = () => {
 
   const { appState } = useAppStateListener();
 
-  const mutation = useMutation(postDebitBalance);
+  // const mutation = useMutation(postDebitBalance);
 
   const handleDebit = (codeType: string, code: string) => {
-    mutation.mutate({ type: 'money', codeType, code });
+    // mutation.mutate({ type: 'money', codeType, code });
   };
 
   const camera = useRef<Camera>(null);
