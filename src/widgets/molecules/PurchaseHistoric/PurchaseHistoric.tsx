@@ -1,7 +1,7 @@
 import React from 'react';
 import { StyledContainer, Typography } from '../../atoms';
 import { HeaderPurchasesHistory } from '../HeaderPurchasesHistory/HeaderPurchasesHistory';
-import { PaymentHistoryList } from '../../organisms/PaymentHistoryList/payment-history-list';
+import { PaymentHistoryList } from '../../organisms/payment-history-list/payment-history-list';
 import { Separator } from '../../atoms';
 
 export const PurchaseHistoric = () => {
